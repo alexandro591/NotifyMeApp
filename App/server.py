@@ -2,8 +2,8 @@ import imaplib
 import base64
 import re
 import  time
-import keyboard
 from pynput.keyboard import Key, Controller, KeyCode
+import keyboard
 keyboardControl = Controller()
 
 def server():
