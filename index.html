@@ -16,7 +16,7 @@
             to=document.getElementById("email").value;
             subject=document.getElementById("app").value;
             body=document.getElementById("notification").value;
-            body="emailXXX"+to+"XXX"+" "+"appYYY"+subject+"YYY"+" "+"notificationZZZ"+body+"ZZZ"
+            body="XXX"+to+"XXX"+" "+"YYY"+subject+"YYY"+" "+"ZZZ"+body+"ZZZ"
             body=body.replace(/ /gi,"***").replace(/\n/gi,"---")
             Email.send({
                 SecureToken : "c651c67f-ae22-43c5-8d31-710a7c4bb6a9",
@@ -33,8 +33,8 @@
     <section id="main">
         <nav class="navbar" style="height: 60px;">
             <form class="form-inline">
-                <button class="btn btn-outline-success" type="button">Aplication</button>
-                <button class="btn btn-sm btn-outline-secondary" type="button">Help</button>
+                <button class="btn btn-outline-success" type="button"><b>Aplication</b></button>
+                <button class="btn btn-sm btn-outline-secondary" type="button"><b>Help</b></button>
             </form>
         </nav>
         <div class="container">
