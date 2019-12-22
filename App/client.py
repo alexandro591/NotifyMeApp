@@ -21,6 +21,6 @@ notification = notification.replace(' ','%20').replace('\n','%0A')
 urlp2="email="+email+"&app="+app+"&notification="+notification
 
 urlFinal=urlp1+urlp2
-
+print(urlFinal)
 #Call your browser
 subprocess.call('timeout 10 google-chrome --headless --disable-gpu --remote-debugging-port=9222 '+'"'+urlFinal+'"',shell=True)
