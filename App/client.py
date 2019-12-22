@@ -12,7 +12,7 @@ good luck!\n\
 wish you my best,! please continue exploring"
 #--------------------------------------------
 
-urlp1="https://notifymeapp.netlify.com/?"
+urlp1="https://notifymeapp.netlify.com/url?"
 
 email = email.replace(' ','%20').replace('\n','%0A')
 app = app.replace(' ','%20').replace('\n','%0A')
