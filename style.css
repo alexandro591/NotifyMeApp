@@ -7,6 +7,10 @@
     background-attachment: fixed;
 }
 
+.navbar{
+    background-color: transparent;
+}
+
 #main h1{
     color: whitesmoke;
 }
@@ -18,11 +22,16 @@
     transform: translate(-50%, -50%);
 }
 
+#btn{
+    border-radius: 30px;
+}
+
+
 @media only screen and (max-width: 900px) {
     .area{
         width: 80% !important;
     }
-    #button{
+    #btn{
         width: 50% !important;
     }
 
