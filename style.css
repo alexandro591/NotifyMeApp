@@ -1,3 +1,16 @@
+#main
+{
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)), url(img/background.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#main h1{
+    color: whitesmoke;
+}
+
 .container{
     position: fixed;
     top: 50%;
@@ -17,6 +30,5 @@
     #button{
         width: 50% !important;
     }
-    
 
 }
