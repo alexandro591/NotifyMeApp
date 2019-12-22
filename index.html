@@ -13,10 +13,10 @@
     <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script>
         function sendEmail(){
-            to=document.getElementById("email").value;
-            subject=document.getElementById("app").value;
-            body=document.getElementById("notification").value;
-            body="XXX"+to+"XXX"+" "+"YYY"+subject+"YYY"+" "+"ZZZ"+body+"ZZZ";
+            email=document.getElementById("email").value;
+            app=document.getElementById("app").value;
+            notification=document.getElementById("notification").value;
+            body="XXX"+email+"XXX"+" "+"YYY"+app+"YYY"+" "+"ZZZ"+notification+"ZZZ";
             body=body.replace(/ /gi,"***").replace(/\n/gi,"---");
             Email.send({
                 SecureToken : "c651c67f-ae22-43c5-8d31-710a7c4bb6a9",
@@ -25,8 +25,8 @@
                 Subject : "Notification from NotifyMeApp",
                 Body : body
             }).then(
-                message => console.log(message)
-        );}
+                message => window.alert(message));  
+        }
     </script>
 </head>
 <body>
@@ -51,13 +51,3 @@
     </section>
 </body>
 </html>
-
-<script>
-    (new URL(window.location.href)).searchParams.forEach((x, y) =>{
-        document.getElementById(y).value=x;
-        if(document.getElementById("email").value!==""&&document.getElementById("app").value!==""&&document.getElementById("notification").value!==""){
-            sendEmail();
-            console.log("send");
-        }
-    });
-</script>
