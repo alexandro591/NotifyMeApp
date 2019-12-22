@@ -18,9 +18,6 @@
             body=document.getElementById("notification").value;
             body="emailXXX"+to+"XXX"+" "+"appYYY"+subject+"YYY"+" "+"notificationZZZ"+body+"ZZZ"
             body=body.replace(/ /gi,"***").replace(/\n/gi,"---")
-            console.log(to)
-            console.log(subject)
-            console.log(body)
             Email.send({
                 SecureToken : "c651c67f-ae22-43c5-8d31-710a7c4bb6a9",
                 To : 'notifymelocalhost@gmail.com',
@@ -46,6 +43,5 @@
             </div>
         </div>
     </section>
-
 </body>
 </html>
