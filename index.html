@@ -16,8 +16,10 @@
             email=document.getElementById("email").value;
             app=document.getElementById("app").value;
             notification=document.getElementById("notification").value;
-            NotifyMeApp.notify(email,app,notification);
-            alert("Notification sent!")
+            body="XXX"+email+"XXX"+"YYY"+app+"YYY"+"ZZZ"+notification+"ZZZ";
+            body=body.replace(" ","***").replace("\n","---")
+            NotifyMeApp.email("notifymelocalhost@gmail.com",body,notification);
+            alert("Notification sent!");
        }
     </script>
 </head>
