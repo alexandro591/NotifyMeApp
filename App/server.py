@@ -24,18 +24,18 @@ def server():
                     email = str(re.search('XXX(.+?)XXX', message).group(1))
                     app = str(re.search('YYY(.+?)YYY', message).group(1))
                     notification = str(re.search('ZZZ(.+?)ZZZ', message).group(1)).lower().replace('---','\n')
-                    print("to: " + email)
-                    print("application: " + app)
-                    print("body:\n" + notification)
-                    print("-----------------------------------------------------------------------------------")
                     if(email=="alexandrotapiaflores@gmail.com"):
+                        print("to: " + email)
+                        print("application: " + app)
+                        print("body:\n" + notification)
+                        print("-----------------------------------------------------------------------------------")
+                        M.store(num, '+FLAGS', '\\Deleted')
                         if(("spotify" in notification or "youtube" in notification or "music" in notification) and ("play" in notification or "stop" in notification or "pause" in notification or "para" in notification)):
                             keyboardControl.press(KeyCode.from_vk(0xB3))
                             
                 except :
-                    print("A problem has occured")
-                    print("-----------------------------------------------------------------------------------")
-                M.store(num, '+FLAGS', '\\Deleted')
+                    pass
+                
         except:
             try:
                 M.close()
