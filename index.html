@@ -12,28 +12,10 @@
     <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="notifymeapp.js"></script>
     <script>
-        /*function sendEmail(){
-            email=document.getElementById("email").value;
-            app=document.getElementById("app").value;
-            notification=document.getElementById("notification").value;
-            body="XXX"+email+"XXX"+" "+"YYY"+app+"YYY"+" "+"ZZZ"+notification+"ZZZ";
-            body=body.replace(/ /gi,"***").replace(/\n/gi,"---");
-            Email.send({
-                SecureToken : "c651c67f-ae22-43c5-8d31-710a7c4bb6a9",
-                To : 'notifymelocalhost@gmail.com',
-                From : "notifymelocalhost@gmail.com",
-                Subject : "Notification from NotifyMeApp",
-                Body : body
-            }).then(
-                message => window.alert(message));  
-        }
-        */
        function sendEmail(){
             email=document.getElementById("email").value;
             app=document.getElementById("app").value;
             notification=document.getElementById("notification").value;
-            body="XXX"+email+"XXX"+" "+"YYY"+app+"YYY"+" "+"ZZZ"+notification+"ZZZ";
-            body=body.replace(/ /gi,"***").replace(/\n/gi,"---");
             notifymeapp(email,app,notification);
        }
     </script>

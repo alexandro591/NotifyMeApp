@@ -4,9 +4,8 @@ function notifymeapp(email,app,notification) {
 	const ret = [];
 	for (let d in data)
 		ret.push(encodeURIComponent(d) + '=' + encodeURIComponent(data[d]));
-	querystring = urlp1+ret.join('&');
-	console.log(querystring)
-	$.get(querystring, function(data){console.log(data)})
+	url = urlp1+ret.join('&');
+	window.open(url,'_blank');
 }
 
 
