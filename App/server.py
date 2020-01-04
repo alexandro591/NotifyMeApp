@@ -21,9 +21,11 @@ def server():
                 message = str(data[0][1].decode('utf-8'))
                 message = message.replace('\n', '').replace('\r', '').replace('=', '').replace('***',' ')
                 try:
+                    print(message)
                     email = str(re.search('XXX(.+?)XXX', message).group(1))
                     app = str(re.search('YYY(.+?)YYY', message).group(1))
                     notification = str(re.search('ZZZ(.+?)ZZZ', message).group(1)).lower().replace('---','\n')
+                    
                     if(email=="alexandrotapiaflores@gmail.com"):
                         print("to: " + email)
                         print("application: " + app)
